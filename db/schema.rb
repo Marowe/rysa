@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301153730) do
+ActiveRecord::Schema.define(version: 20170306122858) do
 
   create_table "countries", force: :cascade do |t|
-    t.string   "coutry_code"
+    t.string   "country_code"
     t.integer  "panel_provider_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

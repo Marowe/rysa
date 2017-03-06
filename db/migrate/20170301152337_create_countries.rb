@@ -1,7 +1,7 @@
 class CreateCountries < ActiveRecord::Migration[5.0]
   def change
     create_table :countries do |t|
-      t.string :coutry_code
+      t.string :country_code
       t.integer :panel_provider_id
 
       t.timestamps
