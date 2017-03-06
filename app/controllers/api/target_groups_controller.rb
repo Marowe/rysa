@@ -4,7 +4,7 @@ class Api::TargetGroupsController < ApplicationController
     if country
       render json: panel_provider.target_group
     else
-      head 500
+      render json: { error: "Ups! There is no country!", available_params: "id"}, status: 400
     end
   end
 end

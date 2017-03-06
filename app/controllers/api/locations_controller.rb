@@ -4,7 +4,7 @@ class Api::LocationsController < ApplicationController
     if country
       render json: panel_provider.locations
     else
-      head 500
+      render json: { error: "Ups! There is no country!", available_params: "id"}, status: 400
     end
   end
 end
