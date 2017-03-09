@@ -168,11 +168,8 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-<<<<<<< HEAD
-  pry
-=======
   mysql2
->>>>>>> 245107e163a8b07d99cb0807a4b7d42bc738ed41
+  pry
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
