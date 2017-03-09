@@ -1,4 +1,4 @@
-class Api::LocationsController < ApplicationController
+class ApiPrivate::LocationsController < ApplicationController
   def index
     country = Country.find_by_country_code(params[:country_code])
     if country
