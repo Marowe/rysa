@@ -29,7 +29,8 @@ class AddLocationGroups < ActiveRecord::Migration[5.0]
         panel_provider_id: 3
       },
       {
-        country_id: 4
+        country_id: 4,
+        panel_provider_id: 3
       }
     ]
   end
