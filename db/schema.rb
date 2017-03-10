@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307131900) do
+ActiveRecord::Schema.define(version: 20170310190519) do
 
-  create_table "countries", force: :cascade do |t|
+  create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "country_code"
     t.integer  "panel_provider_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
-  create_table "location_groups", force: :cascade do |t|
+  create_table "location_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "country_id"
     t.integer  "panel_provider_id"
@@ -27,21 +27,22 @@ ActiveRecord::Schema.define(version: 20170307131900) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "locations", force: :cascade do |t|
+  create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
+    t.integer  "country_id"
     t.integer  "external_id"
     t.string   "secret_code"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "panel_providers", force: :cascade do |t|
+  create_table "panel_providers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "target_groups", force: :cascade do |t|
+  create_table "target_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "external_id"
     t.integer  "parent_id"
