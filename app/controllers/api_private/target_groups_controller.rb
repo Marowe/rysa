@@ -1,4 +1,4 @@
-class Api::TargetGroupsController < ApplicationController
+class ApiPrivate::TargetGroupsController < ApplicationController
   def index
     country = Country.find_by_country_code(params[:country_code])
     if country
